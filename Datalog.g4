@@ -3,17 +3,15 @@ grammar Datalog;
 
 dlog : factList ruleList queryList;
 
-fact : relation;
+fact : ATOM LPAREN terms RPAREN;
 factList : fact | fact factList;
 rule : relation IF body PERIOD;
 ruleList : rule | rule ruleList;
-query : QSTART relation;
+query : Q_START relation;
 queryList : query | query queryList;
-relation : ATOM LPAREN terms RPAREN;
 terms : term | term COMMA terms;
 term : NUMBER | VAR | ATOM;
 body : relation | relation COMMA body;
-
 
 // Lexer rules
 // fragments are not tokens
