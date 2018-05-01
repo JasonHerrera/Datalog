@@ -5,13 +5,13 @@ dlog : factList ruleList queryList;
 
 fact : ATOM LPAREN terms RPAREN;
 factList : fact | fact factList;
-rule : relation IF body PERIOD;
+rule : fact IF body PERIOD;
 ruleList : rule | rule ruleList;
-query : Q_START relation;
+query : Q_START fact;
 queryList : query | query queryList;
 terms : term | term COMMA terms;
 term : NUMBER | VAR | ATOM;
-body : relation | relation COMMA body;
+body : fact | fact COMMA body;
 
 // Lexer rules
 // fragments are not tokens
@@ -27,7 +27,7 @@ RPAREN : ')';
 PERIOD : '.';
 IF : ':-';
 COMMA : ',';
-Q_START : '?-'
+Q_START : '?-';
 ATOM : VALID_ATOM_START VALID_ATOM_CHAR*;
 VAR : VALID_VAR_START VALID_VAR_CHAR*;
 //White Space
