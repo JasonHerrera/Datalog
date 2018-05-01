@@ -15,61 +15,49 @@ public class DatalogBaseListener implements DatalogListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDlog(DatalogParser.DlogContext ctx) { }
+	@Override public void enterDatalog(DatalogParser.DatalogContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDlog(DatalogParser.DlogContext ctx) { }
+	@Override public void exitDatalog(DatalogParser.DatalogContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFact(DatalogParser.FactContext ctx) { }
+	@Override public void enterStatement(DatalogParser.StatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFact(DatalogParser.FactContext ctx) { }
+	@Override public void exitStatement(DatalogParser.StatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFactList(DatalogParser.FactListContext ctx) { }
+	@Override public void enterAssertion(DatalogParser.AssertionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFactList(DatalogParser.FactListContext ctx) { }
+	@Override public void exitAssertion(DatalogParser.AssertionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterRule(DatalogParser.RuleContext ctx) { }
+	@Override public void enterRetraction(DatalogParser.RetractionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitRule(DatalogParser.RuleContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterRuleList(DatalogParser.RuleListContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitRuleList(DatalogParser.RuleListContext ctx) { }
+	@Override public void exitRetraction(DatalogParser.RetractionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -87,13 +75,49 @@ public class DatalogBaseListener implements DatalogListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterQueryList(DatalogParser.QueryListContext ctx) { }
+	@Override public void enterClause(DatalogParser.ClauseContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitQueryList(DatalogParser.QueryListContext ctx) { }
+	@Override public void exitClause(DatalogParser.ClauseContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterBody(DatalogParser.BodyContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitBody(DatalogParser.BodyContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterLiteral(DatalogParser.LiteralContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitLiteral(DatalogParser.LiteralContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterPredSym(DatalogParser.PredSymContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitPredSym(DatalogParser.PredSymContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -123,13 +147,13 @@ public class DatalogBaseListener implements DatalogListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterBody(DatalogParser.BodyContext ctx) { }
+	@Override public void enterConstant(DatalogParser.ConstantContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitBody(DatalogParser.BodyContext ctx) { }
+	@Override public void exitConstant(DatalogParser.ConstantContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

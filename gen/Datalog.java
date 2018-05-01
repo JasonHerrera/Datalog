@@ -1,4 +1,3 @@
-import datalog.generated;
 import org.antlr.runtime.*;
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;

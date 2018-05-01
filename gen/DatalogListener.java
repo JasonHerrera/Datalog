@@ -7,55 +7,45 @@ import org.antlr.v4.runtime.tree.ParseTreeListener;
  */
 public interface DatalogListener extends ParseTreeListener {
 	/**
-	 * Enter a parse tree produced by {@link DatalogParser#dlog}.
+	 * Enter a parse tree produced by {@link DatalogParser#datalog}.
 	 * @param ctx the parse tree
 	 */
-	void enterDlog(DatalogParser.DlogContext ctx);
+	void enterDatalog(DatalogParser.DatalogContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DatalogParser#dlog}.
+	 * Exit a parse tree produced by {@link DatalogParser#datalog}.
 	 * @param ctx the parse tree
 	 */
-	void exitDlog(DatalogParser.DlogContext ctx);
+	void exitDatalog(DatalogParser.DatalogContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DatalogParser#fact}.
+	 * Enter a parse tree produced by {@link DatalogParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void enterFact(DatalogParser.FactContext ctx);
+	void enterStatement(DatalogParser.StatementContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DatalogParser#fact}.
+	 * Exit a parse tree produced by {@link DatalogParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void exitFact(DatalogParser.FactContext ctx);
+	void exitStatement(DatalogParser.StatementContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DatalogParser#factList}.
+	 * Enter a parse tree produced by {@link DatalogParser#assertion}.
 	 * @param ctx the parse tree
 	 */
-	void enterFactList(DatalogParser.FactListContext ctx);
+	void enterAssertion(DatalogParser.AssertionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DatalogParser#factList}.
+	 * Exit a parse tree produced by {@link DatalogParser#assertion}.
 	 * @param ctx the parse tree
 	 */
-	void exitFactList(DatalogParser.FactListContext ctx);
+	void exitAssertion(DatalogParser.AssertionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DatalogParser#rule}.
+	 * Enter a parse tree produced by {@link DatalogParser#retraction}.
 	 * @param ctx the parse tree
 	 */
-	void enterRule(DatalogParser.RuleContext ctx);
+	void enterRetraction(DatalogParser.RetractionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DatalogParser#rule}.
+	 * Exit a parse tree produced by {@link DatalogParser#retraction}.
 	 * @param ctx the parse tree
 	 */
-	void exitRule(DatalogParser.RuleContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link DatalogParser#ruleList}.
-	 * @param ctx the parse tree
-	 */
-	void enterRuleList(DatalogParser.RuleListContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link DatalogParser#ruleList}.
-	 * @param ctx the parse tree
-	 */
-	void exitRuleList(DatalogParser.RuleListContext ctx);
+	void exitRetraction(DatalogParser.RetractionContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link DatalogParser#query}.
 	 * @param ctx the parse tree
@@ -67,15 +57,45 @@ public interface DatalogListener extends ParseTreeListener {
 	 */
 	void exitQuery(DatalogParser.QueryContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DatalogParser#queryList}.
+	 * Enter a parse tree produced by {@link DatalogParser#clause}.
 	 * @param ctx the parse tree
 	 */
-	void enterQueryList(DatalogParser.QueryListContext ctx);
+	void enterClause(DatalogParser.ClauseContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DatalogParser#queryList}.
+	 * Exit a parse tree produced by {@link DatalogParser#clause}.
 	 * @param ctx the parse tree
 	 */
-	void exitQueryList(DatalogParser.QueryListContext ctx);
+	void exitClause(DatalogParser.ClauseContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link DatalogParser#body}.
+	 * @param ctx the parse tree
+	 */
+	void enterBody(DatalogParser.BodyContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link DatalogParser#body}.
+	 * @param ctx the parse tree
+	 */
+	void exitBody(DatalogParser.BodyContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link DatalogParser#literal}.
+	 * @param ctx the parse tree
+	 */
+	void enterLiteral(DatalogParser.LiteralContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link DatalogParser#literal}.
+	 * @param ctx the parse tree
+	 */
+	void exitLiteral(DatalogParser.LiteralContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link DatalogParser#predSym}.
+	 * @param ctx the parse tree
+	 */
+	void enterPredSym(DatalogParser.PredSymContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link DatalogParser#predSym}.
+	 * @param ctx the parse tree
+	 */
+	void exitPredSym(DatalogParser.PredSymContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link DatalogParser#terms}.
 	 * @param ctx the parse tree
@@ -97,13 +117,13 @@ public interface DatalogListener extends ParseTreeListener {
 	 */
 	void exitTerm(DatalogParser.TermContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DatalogParser#body}.
+	 * Enter a parse tree produced by {@link DatalogParser#constant}.
 	 * @param ctx the parse tree
 	 */
-	void enterBody(DatalogParser.BodyContext ctx);
+	void enterConstant(DatalogParser.ConstantContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DatalogParser#body}.
+	 * Exit a parse tree produced by {@link DatalogParser#constant}.
 	 * @param ctx the parse tree
 	 */
-	void exitBody(DatalogParser.BodyContext ctx);
+	void exitConstant(DatalogParser.ConstantContext ctx);
 }
